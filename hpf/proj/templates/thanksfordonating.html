@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'donate.css' %}">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPF - Thank you</title>
+</head>
+<body class="jumbotron" style="padding: 0">
+    <div>
+        <div class="background-image-intro contact-bg">
+          <div id="bg-wrapper" class="dark-wrapper">
+            <nav class="nav-desk">
+                <div class="nav-logo">
+                    <a href="https://humanpractice.org"><img id="logo" src="{% static 'assets/img/logo2.png' %}"></a>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="jumbotron text-center">
+            <h1 class="display-3">Thank You!</h1>
+            <p class="lead"><strong>Please check your email</strong> for your personalised invoice.</p>
+            <hr>
+            <img src="{% static 'smile.png' %}" style = "width: 20%;">
+            <p>
+              Click here to check the fundraising  <a href="humanpractice.org">updates.</a>
+            </p>
+            <p class="lead">
+              <a class="btn btn-primary btn-sm" href="{% url 'home' %}" role="button">Continue to homepage</a>
+            </p>
+          </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: "Cambria", sans-serif;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% load static %}
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="functions.js"></script> -->
+    <script src="{% static 'functions.js' %}"></script>
+
+    <script>
+      var submitted = false;
+    </script>
+    <title>HPF - Ampegudin School</title>
+  </head>
+  <body>
+
+<div class="container">
+
+<div class="background-image-intro contact-bg">
+  <div id="bg-wrapper" class="dark-wrapper">
+    <nav class="nav-desk">
+      <div class="nav-logo">
+          <a href="index.html"><img id="logo" src="{% static 'assets/img/logo2.png' %}"></a>
+      </div>
+      <div class="nav-items">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+          </ul>
+      </div>
+</nav>
+
+    <div class="intro-container">
+
+      <div class="intro">
+        <div class="animated fadeIn row" style="width:100vw;animation-duration: 1.5s;">
+            <div class="col-md-6" id="left-hero">
+                <h1 class="hero-tag"><span class="typer" id="main" data-words="Ambegudin School" data-delay="100"
+                        data-deleteDelay="1000" data-loop="1" style="color:white!important;"></span>
+                    &nbsp;</h1>
+                    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+          
+            </div>
+        </div>
+        <form action="{% url 'donation' %}" method="GET">
+          
+        <input type="hidden" name="project_name" value="ambegudin">
+        <input type="text" id="amount" name="amount" placeholder="Amount" required>
+        <select id="currency" name="currency">
+            <option>select currency</option>
+            <option value="GBP">Great British Pound</option>
+            <option value="EUR">Euro</option>
+            <option value="USD">American Dollar</option>
+            <option value="CHF">Swiss Franc</option>
+            <option value="JPY">Japanese Yen</option>
+            <option value="CAD">Canadian Dollar</option>
+            <option value="AUD">Australian Dollar</option>
+            <option value="DKK">Danish Krone</option>
+        </select>
+        <select id="project" name="specific_project">
+          <option value="None">Whole School</option>
+          <option value="library">Library</option>
+          <option value="classroom">Classrooms</option>
+          <option value="technology">Technology</option>
+          <option value="toilets">Toilets</option>
+      </select>
+        <button class="button-design darker-opacity" type="submit" name="button">Donate</button>
+        <p>
+          Thank you for considering donating to Nepalese School We are currently accepting donations towards <br>
+the new classrooms, bathroom facilities and playground. Your donation will mean a lot in putting <br> a smile on!
+        </p>
+      </form>
+
+
+          <!-- <h1 class="submission">Thank you for submitting this form</h1> -->
+  
+      </div>
+
+
+      
+    </div>
+
+
+  </div>
+  
+</div>
+
+<div id="info-container-contact-us" class="info-container">
+
+  <div id="contact-us-mobile" class="info-section info-bg1">
+        
+      </div>
+</div>
+
+
+
+
+
+</div>
+<div class="footer"></div>
+
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<html>
+
+<head>
+
+    {% load static %}
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+        
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{% static 'normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'donate.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="donate.css">    -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <meta name="Description"
+        content="Donation page" />
+    <title>HPF - Donation Page</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+    <script src="{% static 'assets/js/app.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
+    <link rel="manifest" href="manifest.json">
+</head>
+        <body id="index-body" style="overflow: hidden;">
+          <div>
+            <div class="background-image-intro contact-bg">
+              <div id="bg-wrapper" class="dark-wrapper">
+                <nav class="nav-desk">
+                  <div class="nav-logo">
+                      <a href="index.html"><img id="logo" src="{% static 'assets/img/logo2.png' %}"></a>
+                  </div>
+                  <div class="nav-items">
+                      <ul>
+                          <li><a href="home.html">Home</a></li>
+                      </ul>
+                  </div>
+            </nav>
+        <div class="row">
+            <div class="col-75">
+              <div class="container">
+                <form method="POST">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Billing Address</h3>
+                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                      <input id="email" name="email" placeholder="john@example.com" type = "email" required>
+                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+                      <label for="city"><i class="fa fa-institution"></i> City</label>
+                      <input type="text" id="city" name="city" placeholder="London" required>
+        
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="state">Town</label>
+                          <input type="text" id="town" name="town" placeholder="Holborn" required>
+                        </div>
+                        <div class="col-50">
+                          <label for="postcode">Postcode</label>
+                          <input type="text" id="postcode" name="postcode" placeholder="W2 3CN" pattern = "([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})" required>
+                        </div>
+                      </div>
+                    </div>
+        
+                    
+                    
+                    <div class="col-50">
+                      <h3>Payment</h3>
+                      <label for="fname">Select Card Type</label>
+                      <div class="icon-container">
+                        <select id="cardType" name="cardType" onchange="selectCard(value)">
+                          <option>Select</option>
+                          <option value="amex">American Express</option> 
+                          <option value="mc">Mastercard</option> 
+                          <option value="visa">Visa</option>                   
+                          </select>
+                      </div>
+                      <label for="cname">Name on Card</label>
+                      <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+                      <label for="ccnum">Credit card number</label>
+                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111222233334444" onchange="checkRegex(value);" value="370371740461022" required>
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="expyear">Expiring Date</label>
+                          <select name='expireMM' id='expireMM' required>
+                            <option value=''>Month</option>
+                            <option value='01'>January</option>
+                            <option value='02'>February</option>
+                            <option value='03'>March</option>
+                            <option value='04'>April</option>
+                            <option value='05'>May</option>
+                            <option value='06'>June</option>
+                            <option value='07'>July</option>
+                            <option value='08'>August</option>
+                            <option value='09'>September</option>
+                            <option value='10'>October</option>
+                            <option value='11'>November</option>
+                            <option value='12'>December</option>
+                        </select> 
+                        <select name='expireYY' id='expireYY' required>
+                          <option value=''>Year</option>
+                          <option value='22'>2022</option>
+                          <option value='23'>2023</option>
+                          <option value='24'>2024</option>
+                          <option value='25'>2025</option>
+                          <option value='26'>2026</option>
+                          <option value='27'>2027</option>
+                          <option value='28'>2028</option>
+                        </select>
+                        </div>
+                        <div class="col-50">
+                          <label for="cvv">CVV</label>
+                          <input type="text" id="cvv" name="cvv" placeholder="352" pattern = "^[0-9]{3,4}$"required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <label>
+                    <input type="checkbox" name="anon"> Would you like your donation to be anonymous? </input>
+                  </label>
+                  <input type="hidden" name="project_name" value="{{ project_name }}">
+                  <input type="hidden" name="donationAmount" value="{{ amount }}">
+                  <input type="hidden" name="currency" value="{{ currency }}">
+                  <input type="hidden" name="specific_project" value="{{ specific_project }}">
+                  <input type="submit" value="Donate" class="btn" onclick="return checkRegex(); return checkDate();">
+                </form>
+
+
+
+              </div>
+            </div>
+
+            <div class="col-25">
+                <div class="container">
+                  <h4>Donation <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i></span></h4>
+                  <p>Amount<p>
+                  <hr>
+                  <p>Total <span class="price" style="color:black"><b>{{ currency }} {{ amount }}</b></span></p>
+                </div>
+              </div>
+          </div>
+ 
+    </div>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#" style="text-decoration: line-through;">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="#">Uses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="legal">
+        <a href="legal.html">legal</a>
+    </div>
+</body>
+
+</html>

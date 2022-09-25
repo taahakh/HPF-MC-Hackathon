@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="proj_name">Enter Project Name</label>
+        <input type="text" name="proj_name" id="proj_name">
+        <label for="goal">Max Goal</label>
+        <input type="text" name="goal" id="goal">
+        <button type="submit">Submit</button>
+    </form>
+
+    <form action="{% url 'add_facility' %}" method="post">
+        <h3>Add facility to project</h3>
+        {% csrf_token %}
+        <label for="f_name">Enter facility name</label>
+        <input type="text" name="f_name" id="f_name">
+        <select name="f_project" id="f_project">
+            {% for project in content %}
+                <option value="{{ project.project_name }}">{{ project.project_name }}</option>
+            {% endfor %}
+          </select>
+        <label for="max_ammount">Max ammount for facility</label>
+        <input type="text" name="ammount" id="ammount">
+        <button type="submit">Submit</button>
+    </form>
+
+    {% for x in content %}
+        <p>Project Name: {{ x.project_name }} </p> 
+        <p>Max goal: {{ x.max_goal }}</p>
+        <p>Money so far: {{ x.so_far }}</p>
+        <button>Remove</button>
+        <p> ------------------------------ </p>
+    {% endfor %}
+</body>
+</html>

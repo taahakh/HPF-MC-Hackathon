@@ -1,0 +1,1057 @@
+/* @import "assets/fonts/fonts.css"; */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+/* FONT FACES */
+
+
+:root {
+  --niceblack: #fdf3f3;
+  --dirtywhite: rgb(253, 245, 230);
+  --bg2: rgba(255, 228, 181, 0.9);
+  /* --body: rgba(25,25,25,1); */
+}
+
+* {
+  box-sizing: border-box;
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--body);
+  margin: 0 auto;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+h1, th {
+  font-family: 'Roboto', sans-serif;
+}
+
+p, a, td {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* top-half container*/
+.container {
+  /* height: 100vh; */
+  /* height: 50vh; */
+  width: 100%;
+}
+
+
+.topbar {
+  padding: 15px 100px 0 100px;
+  width: 100%;
+  height: 100px;
+}
+
+/* NAVBAR code */
+.logo {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+/* NAVBAR CODE */
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu div {
+  display: inline-block;
+  margin-left: 10px;
+  padding-top: 30.5px;
+
+}
+
+.menu div a {
+  color: var(--dirtywhite);
+  letter-spacing: 2px;
+  font-size: 13px;
+
+}
+
+
+.nav-corrections .drop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Navigation bar toggle mobile css*/
+
+label {
+  display: none;
+  color: white;
+}
+
+#nav-toggle {
+  font-size: 30px;
+}
+
+
+.icon-align_justify {
+  display: inline-block;
+  padding-right: 37px;
+  padding-top: 35.5px;
+}
+
+#toggle {
+  display: none;
+}
+
+/* CSS CLASS FOR intro-container  */
+.hide-intro-container {
+  display: none !important;
+}
+
+.mobile-menu-background {
+  background-color: var(--body);
+
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  line-height: 18.75vh;
+  padding-top: 10px;
+  z-index: 1;
+  text-align: center;
+  background-color: var(--body);
+}
+
+.mobile-menu a {
+  color: white;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+.mobile-list {
+  display: none;
+  line-height: 10px;
+}
+
+.mobile-list div a {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 200;
+}
+
+.mobile-list div {
+  padding-bottom: 20px;
+}
+
+#mobile-list-input {
+  display: none;
+
+}
+
+#mobile-list-input:checked ~ .mobile-list {
+  display: block;
+
+}
+
+.arrow {
+  height: 30px;
+  left: 0;
+  top: 0;
+  width: 40px;
+
+}
+
+#mobile-list-button {
+  display: inline;
+}
+
+.icon-arrow_left {
+  display: inline-block;
+  padding-bottom: 10px;
+  transform: translate(30px, -5px);
+}
+
+
+.intro-title {
+  font-size: 60px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--dirtywhite);
+}
+
+
+.intro-title span {
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: auto;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 65px;
+}
+
+
+.intro-container p span {
+  color: var(--dirtywhite);
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 2px;
+}
+
+.intro {
+  width: 100%;
+  float: left;
+  padding: 20px;
+  display: table;
+  margin-left: 160px;
+  margin-top: 140px;
+}
+
+#service .info-lg-bx {
+  padding-bottom: 30px;
+}
+
+
+table {
+  border-radius: 12px;
+  margin: 0 auto;
+  background-color: var(--bg2);
+  padding: 20px 150px 30px 150px;
+  color: black;
+  /* width: 390px; */
+  width: 1100px;
+
+}
+
+tbody {
+  padding-top: 10px;
+}
+
+td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 500;
+}
+
+td:first-child {
+  width: 200px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+td:last-child {
+  font-family: sans-serif;
+  line-height: 35px;
+  font-size: 14px;
+  padding-left: 50px;
+}
+
+tr {
+  padding-right: 100px;
+}
+
+thead th {
+  font-size: 30px;
+  padding-bottom: 40px;
+  letter-spacing: 1px;
+
+}
+
+thead {
+  padding-bottom: 100px;
+}
+
+.table {
+  width: auto;
+}
+
+.list {
+  margin: 0 auto;
+  width: 1000px;
+  padding: 20px;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-bottom: 0;
+  border-radius: 12px;
+  background-color: var(--bg2);
+}
+
+.list ul {
+  list-style: circle;
+}
+
+.list li {
+  padding-bottom: 20px;
+  font-size: 14px;
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: sans-serif;
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.list h1 {
+  /* font-family: 'Roboto', sans-serif; */
+  letter-spacing: 1px;
+}
+
+.evaluation {
+  text-align: center;
+  transform: none;
+  margin: 0 auto;
+}
+
+.legalprep {
+  min-height: 0;
+  height: auto;
+}
+
+.landlord-bg {
+  background-image: url('assets/background-images/sun1x.webp');
+}
+
+.info-section {
+  float: left;
+  height: 400px;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  /*top right bottom left*/
+}
+
+
+/
+
+
+/* -- Contact us -- */
+
+.contact-bg {
+  background-image: url('assets/background-images/bob1x.webp')
+}
+
+/* when width is large enough */
+#contact-us-up {
+  float: right;
+  width: 40%;
+  transform: translateX(-20px) translateY(-200px);
+}
+
+/* for smaller devices like tablets and phones */
+#contact-us-under {
+  display: none;
+  width: 100%;
+}
+
+
+/* Contact us title*/
+.contact-us h1 {
+  color: var(--dirtywhite);
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+/* design */
+input:focus, textarea:focus {
+  outline: none;
+}
+
+
+/* design */
+.contact p input, .contact p textarea {
+  border: none;
+  border-bottom: solid 2px #B8B8B8;
+  background: transparent;
+  height: 37px;
+  color: white;
+  width: 400px;
+  font-family: sans-serif, Helvetica, Arial;
+  letter-spacing: 1px;
+}
+
+/* design */
+/*Placeholder headers for input boxes*/
+.contact h1 {
+  color: white;
+  font-size: 11px;
+  transform: translateY(15px);
+  opacity: 0.7;
+  /* font-family: 'Raleway', sans-serif; */
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+/* design - inquiry*/
+.contact p textarea {
+  width: 350px;
+  height: 100px;
+}
+
+/* -- Button design -- */
+
+.button-design {
+  border: none;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+  width: 160px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.64);
+  margin-top: 5px;
+}
+
+.button-design:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.button-design-a {
+  display: inline-block;
+  text-align: center;
+}
+
+
+/* -- Media controls -- */
+
+@media screen and (max-width: 2100px) {
+
+  /* < widescreen fixing*/
+  .about-us {
+      height: auto;
+  }
+
+  /* god knows */
+  .about-us-response p {
+      width: 100%;
+      transform: none;
+  }
+}
+
+@media screen and (max-width: 1921px) {
+
+  .index-bg {
+      background-image: url("assets/background-images/alex0.45x.webp");
+  }
+
+  .contact-bg {
+      background-image: url('assets/background-images/bob0.33x.webp')
+  }
+
+  .service-bg {
+      background-image: url("assets/background-images/jean0.35x.webp");
+  }
+
+  .about-us-bg {
+      background-image: url("assets/background-images/sam0.48.webp");
+  }
+
+  .landlord-bg {
+      background-image: url("assets/background-images/sun0.32.webp");
+  }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  /* Makes more friendly with smaller size. Makes Second row have all boxes
+  full row */
+  .about-us-response {
+      width: 100%;
+      transform: none;
+  }
+
+  /* Centering and set-width of second row */
+  .about-us-resize {
+      margin: 0 auto;
+      width: 600px;
+  }
+
+  /* When resizing, makes the logo further away from the side of the page */
+  #f-left {
+      padding-left: 40px;
+  }
+
+  table {
+      width: auto;
+  }
+
+  td:last-child {
+      padding-left: 0;
+  }
+
+  /* reducing input box size for smaller devices */
+  .contact p input, .contact p textarea {
+      width: 300px;
+  }
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+  /* Main contact form hidden */
+  #contact-us-up {
+      display: none;
+  }
+
+  /* mobile contact form shown */
+  #contact-us-under {
+      display: block;
+  }
+
+  /* defining width and height for the mobile version */
+  #contact-us-mobile {
+      width: 100%;
+      height: 600px;
+  }
+
+  .intro {
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .list {
+      width: fit-content;
+  }
+
+}
+
+@media screen and (max-width: 1099px) {
+
+  .f {
+      height: auto;
+  }
+
+  #f-container {
+      width: 100%;
+      margin: 0 auto;
+  }
+
+  /* reducing input box size for smaller devices */
+  .contact p input, .contact p textarea {
+      width: 400px;
+  }
+
+}
+
+@media screen and (max-width: 994px) {
+
+  .info-section {
+      width: 100%;
+      height: auto;
+      padding-bottom: 50px;
+  }
+
+  #info-index-title {
+      height: 200px;
+  }
+
+  .info-sml-bx {
+      float: none;
+      width: 100%;
+      height: 200px;
+  }
+
+  .info-med-bx {
+      float: none;
+      width: 100%;
+      height: 300px;
+  }
+
+  .info-lg-bx {
+      float: none;
+      width: 100%;
+  }
+
+  .bottom-info {
+      height: 400px;
+  }
+
+  .medium-info-box p textarea {
+      width: 300px;
+      height: 150px;
+  }
+
+  .extension {
+      height: auto;
+  }
+
+  .title-separation {
+      height: auto;
+      font-size: 15px;
+  }
+
+  .box-separation {
+      height: auto;
+  }
+
+  /* Makes all boxes full width. 2 row is already full box, so now 1,3 are now */
+  .about-us p {
+      width: 100%;
+      transform: none;
+  }
+
+}
+
+
+@media screen and (max-width: 960px) {
+
+  #f-container {
+      text-align: center;
+      height: auto;
+  }
+
+  #f-left {
+      padding-left: 29px;
+  }
+
+  #f-right {
+      padding-left: 60px;
+  }
+
+  #f-left, #f-right, #f-bottom, #f-container {
+      width: 100%;
+  }
+
+  #f-bottom {
+      margin-top: 100px;
+  }
+
+  #f-icons {
+      padding-left: 21px;
+  }
+
+  .topbar {
+      padding: 0;
+      padding-right: 25px;
+  }
+
+  .logo {
+      /* padding-left: 20px; */
+      padding-left: 30px;
+      padding-top: 20px;
+  }
+
+  .menu {
+      padding-top: 11.5px;
+      padding-right: 17px;
+  }
+
+}
+
+
+@media screen and (max-width: 880px) {
+
+  td:first-child {
+      width: 100px;
+  }
+
+  td:last-child {
+      width: auto;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  /* reducing input box size for smaller devices */
+  .contact p input, .contact p textarea {
+      width: 320px;
+  }
+
+
+  /* service */
+  table {
+      padding: 0;
+      padding-bottom: 25px;
+      height: auto;
+  }
+
+  table, tbody, tr, td {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+
+  }
+
+  td {
+      margin-left: 50px;
+  }
+
+  td:first-child, td:last-child {
+      width: 100%;
+  }
+
+  #thead-display {
+      display: none;
+  }
+
+  /* Makes second row dynamic with size. It has been fixed width up until now */
+  .about-us-resize {
+      width: 100%;
+      height: auto;
+  }
+
+  #about-us-deextension, #about-us-extension {
+      height: auto;
+  }
+
+
+}
+
+
+@media screen and (max-width: 670px) {
+
+  label {
+      display: block;
+      cursor: pointer;
+  }
+
+  .menu {
+      display: none;
+  }
+
+  #toggle:checked + .mobile-menu {
+      display: block;
+  }
+
+  .topbar {
+      padding: 0;
+  }
+
+  .list {
+      padding: 0;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 5px;
+  }
+
+  .list ul {
+      padding: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 12px;
+  }
+
+  #f-right {
+      padding-right: 45px;
+  }
+
+  #f-align-fix {
+      padding-right: 60px;
+      padding-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width: 570px) {
+
+  /* reducing input box size for smaller devices */
+  .contact p input, .contact p textarea {
+      width: 250px;
+  }
+
+  .footer {
+      height: auto;
+      width: 100%;
+  }
+
+  .f-align-upper {
+      padding-left: 12px;
+  }
+
+  .f-inline {
+      width: 100%;
+  }
+
+  /* changing font size in light of width */
+  .about-us p {
+      font-size: 16px;
+  }
+
+  /* changing font size in light of width */
+  .about-us h1 {
+      font-size: 30px;
+  }
+
+  /* used for legal prep and property prep */
+  #legal-title {
+      font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 367px) {
+
+  /*Last icon of social media - this case youtube*/
+  #f-icons a:last-child span {
+      padding-top: 15px;
+  }
+
+}
+
+
+@media screen and (max-width: 360px) {
+
+  /* reducing input box size for smaller devices */
+  .contact p input, .contact p textarea {
+      width: 200px;
+  }
+
+  #contact-us-mobile-header {
+      font-size: 27px;
+  }
+
+  .intro-container {
+      padding: 0;
+  }
+
+  #f-container {
+      height: auto;
+      width: auto;
+  }
+
+  #f-align-fix li {
+      height: auto;
+      padding-bottom: 12px;
+  }
+
+
+  #f-hr hr {
+      width: 150px;
+  }
+
+  .logo img {
+      content: url("assets/logo_small.png");
+      width: 153.6px;
+      height: 56.8px;
+  }
+
+  #nav-toggle {
+      font-size: 27px;
+  }
+
+  /* #nav-toggle i{
+    padding-top: 34px;
+  } */
+  .icon-align_justify {
+      padding-top: 34px;
+  }
+
+  #index-info {
+      height: 1600px;
+  }
+
+  /*Font size for website front title*/
+  .intro-title {
+      font-size: 50px;
+  }
+
+  /* special ajustment for services title */
+  #service-title {
+      font-size: 50px;
+  }
+
+  #legal-title {
+      font-size: 30px;
+  }
+
+  hr {
+      width: 250px;
+  }
+}
+
+@media screen and (max-width: 281px) {
+
+  /*Height error with small width screen for index info box*/
+  #index-info {
+      height: 1780px;
+  }
+
+  td:last-child {
+      font-size: 14px;
+  }
+
+  #f-top, #f-bottom {
+      transform: translateX(-16px);
+  }
+
+  hr {
+      width: auto;
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
+
+  /* makes mobile hidden when bigger screen size is available */
+  #info-container-contact-us {
+      display: none;
+  }
+}
+
+
+.hero-tag {
+  margin-top: 20vh;
+  font-size: 4em;
+  color: white;
+}
+
+
+.nav-desk {
+  background-color: #763e98;
+  height: 10vh;
+  /* position: fixed; */
+  display: block;
+  width: 100%;
+  margin: auto;
+
+
+  left: 0;
+  right: 0;
+  /* background: black; */
+}
+
+.nav-logo {
+  padding: 1em;
+  height: 100%;
+  float: left;
+}
+
+.nav-items {
+  color: red;
+  float: right;
+}
+
+.menu ul li {
+  display: block !important;
+}
+
+.menu ul li a {
+  color: var(--black-color) !important;
+}
+
+li span a {
+  color: #444;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+li span a:hover {
+  color: #444;
+  text-decoration: none;
+}
+
+#logo {
+  margin-top: px;
+  height: 110%;
+  padding: 6px;
+
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 11px 20px;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 1em;
+}
+
+ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.top {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0B132B;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.title {
+  margin-left: 10px;
+  margin-top: 10px;
+  float: left;
+  display: inline-block;
+  color: #6FFFE9;
+  margin-right: 3em;
+}
+
+hgroup {
+  float: left;
+}
+
+li {
+  float: left;
+}
+
+input, textarea {
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 11px 20px;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+#currency, #project {
+  width: 15%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 50px;
+}
+
+input[type=text], input[type="email"] {
+  width: 15%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 50px;
+  padding-left: 2em;
+}
+
+img {
+  height: 118%;
+  width: auto;
+}
+
+p {
+  font-size: 130%;
+}
+
+#nepalimg {
+  width: 70%;
+}

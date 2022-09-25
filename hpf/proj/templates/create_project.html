@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Project</title>
+    <link rel="stylesheet" href="{% static 'create_proj_style.css' %}">
+</head>
+<body>
+<div class = "body">
+    <form method="post">
+        {% csrf_token %}
+        <h3><b>New project</b></h3>
+        <label for="proj_name">Project Name: </label>
+        <input type="text" name="proj_name" id="proj_name">
+        <label for="goal"><br>Max Goal: </label>
+        <input type="text" name="goal" id="goal">
+        <button type="submit">Submit</button>
+    </form>
+
+    <form action="{% url 'add_facility' %}" method="post">
+        <h3>Add facility to project</h3>
+        {% csrf_token %}
+        <label for="f_name">Facility name: </label>
+        <input type="text" name="f_name" id="f_name">
+        <select name="f_project" id="f_project">
+            {% for project in content %}
+            <option value="{{ project.project_name }}">{{ project.project_name }}</option>
+            {% endfor %}
+        </select>
+        <label for="max_ammount"><br>Max ammount for facility</label>
+        <input type="text" name="amount" id="ammount">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class = "body">
+        
+
+        
+        {% for x in content %}
+        <form action="{% url 'view_facilities' %}" method="GET">
+        <p><b>Project Name: </b> {{ x.project_name }} </p>
+        <p><br><br>Max goal: {{ x.max_goal }}</p>
+        <p>Money so far: {{ x.so_far }}</p>
+        <input type="hidden" name="proj" value="{{ x.project_name }}">
+        <button type="submit">See facilities</button>
+        <p> ------------------------------ </p>
+        </form>
+        {% endfor %}
+    </div>
+
+    
+
+    {% for item in facility %}
+        <p>{{ item.name }}</p>
+    {% endfor %}
+</div>
+
+</body>
+</html>
